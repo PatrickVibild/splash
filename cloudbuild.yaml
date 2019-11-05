@@ -8,6 +8,7 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   id: Build
   args: ['build', '-t', 'gcr.io/abiding-robot-255320/n1scrapper:$SHORT_SHA', '.']
+  timeout: 1800s
 
 #Adds the container to Google container registry as an artefact
 - name: 'gcr.io/cloud-builders/docker'
